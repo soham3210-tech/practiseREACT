@@ -1,0 +1,57 @@
+.container {
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.container img {
+    width: 700px;
+    height: 500px;
+
+}
+
+.indicator {
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+
+
+}
+
+.indicator span {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+
+}
+
+.indicator .active {
+    background-color: black;
+}
+
+.arrow {
+    display: flex;
+
+    gap: 600px;
+}
+
+.arrow span {
+
+    font-size: 2rem;
+    height: 40px;
+    width: 40px;
+    background-color: aqua;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
