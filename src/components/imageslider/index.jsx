@@ -7,9 +7,12 @@ const index = () => {
     const [loading, setloading] = useState(true)
     useEffect(() => {
         async function fetchimages() {
+            setloading(true)
             const response = await fetch("https://picsum.photos/v2/list?page=1&limit=5");
             const data = await response.json();
             setimages(data);
+            setloading(false);
+
         }
         fetchimages();
     }, []);
@@ -31,7 +34,8 @@ const index = () => {
     }
     return (
         <div className='container'>
-            <img key={images[currentindex]?.id} src={images[currentindex]?.download_url} alt="Random" width="200" />
+            {loading === true ? (<h1>LOADING</h1>) : (
+                <img key={images[currentindex]?.id} src={images[currentindex]?.download_url} alt="Random" width="200" />)}
             <div className='indicator'>
                 <span className={currentindex === 0 ? 'active' : 'inactive'}></span>
                 <span className={currentindex === 1 ? 'active' : 'inactive'}></span>
