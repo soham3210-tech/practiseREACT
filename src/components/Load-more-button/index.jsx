@@ -32,12 +32,12 @@ const index = () => {
                 {product.map((product) => (
                     <img src={product.thumbnail} alt={product.title} key={product.id} />
                 ))}
-
+                <div className="loadmore">
+                    <button>Load More</button>
+                </div>
             </div>
 
-            <div className="loadmorebutton">
-                <button>Load More</button>
-            </div>
+
 
 
         </div>
