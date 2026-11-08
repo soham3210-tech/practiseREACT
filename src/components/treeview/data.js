@@ -10,7 +10,7 @@ const data = [
       {
         label: "Details",
         to: "/profile/details",
-        children: [
+        children : [
           {
             label: "Location",
             to: "/profile/details/location",
